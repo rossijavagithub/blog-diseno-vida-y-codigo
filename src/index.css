@@ -37,49 +37,51 @@ textarea {
 
 .header {
   height: 76px;
-  padding: 0 12%;
+  padding: 0 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 20;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-family: "Mr De Haviland", cursive;
-  font-size: 39px;
+  font-size: 38px;
   font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .logo-dot {
   color: #ff73ad;
-  font-size: 2em;
-}
-
-.menu-button {
-  display: none;
-  border: 0;
-  background-color: transparent;
-  color: #ff73ad;
-  font-size: 24px;
-  cursor: pointer;
+  font-size: 34px;
+  line-height: 1;
+  margin-left: 6px;
+  position: relative;
+  top: 2px;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 44px;
+  gap: 36px;
   font-size: 14px;
   font-weight: 700;
 }
 
 .nav a {
+  display: flex;
+  align-items: center;
   color: #222222;
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
+  line-height: 1.1;
   transition: all 0.3s ease;
 }
 
@@ -90,7 +92,7 @@ textarea {
 }
 
 .nav-about {
-  margin-left: 80px;
+  margin-left: 70px;
 }
 
 .nav-design-link {
@@ -101,9 +103,19 @@ textarea {
 
 .nav-icon {
   color: #ff73ad;
-  font-size: 18px;
+  font-size: 17px;
   position: relative;
-  top: -4px;
+  top: 0;
+}
+
+/* BOTÓN HAMBURGUESA */
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 
@@ -204,7 +216,9 @@ textarea {
    ========================================================= */
 
 .posts-section {
-  padding: 36px 7% 50px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 36px 24px 50px;
   scroll-margin-top: 90px;
 }
 
@@ -742,13 +756,18 @@ textarea {
 
 @media (max-width: 900px) {
   .header {
-    height: auto;
-    padding: 18px 24px;
-    flex-wrap: wrap;
+    height: 64px;
+    padding: 0 24px;
+    flex-wrap: nowrap;
   }
 
   .logo {
-    font-size: 34px;
+    font-size: 30px;
+  }
+
+  .logo-dot {
+    font-size: 26px;
+    top: 1px;
   }
 
   .menu-button {
@@ -760,12 +779,17 @@ textarea {
   }
 
   .nav.nav-open {
+    position: absolute;
+    top: 64px;
+    left: 0;
     width: 100%;
-    padding: 20px 0 8px;
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   }
 
   .nav-about {
@@ -774,83 +798,74 @@ textarea {
 
   .hero {
     height: auto;
-    padding: 50px 24px;
+    padding: 36px 24px;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 
   .hero h1 {
-    font-size: 46px;
+    font-size: 42px;
+  }
+
+  .hero .intro {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
   }
 
   .hero-image-box {
-    height: auto;
+    height: 260px;
   }
 
   .hero-photo {
     border-radius: 18px;
   }
 
-  .posts-section,
-  .category-page,
-  .post-detail,
-  .manager-page,
-  .about-page {
-    padding: 50px 24px;
+  .posts-section {
+    max-width: 420px;
+    padding: 42px 16px;
   }
 
   .post-grid {
     grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .post-card-image {
+    height: 150px;
+  }
+
+  .post-card-content {
+    padding: 18px;
+  }
+
+  .post-card h3 {
+    font-size: 17px;
+  }
+
+  .post-excerpt {
+    font-size: 13px;
   }
 
   .home-about {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 42px 16px;
     grid-template-columns: 1fr;
-    padding: 40px 24px;
+    gap: 24px;
   }
 
   .home-about-image {
     width: 100%;
-    height: auto;
-  }
-
-  .about-main {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .about-photo {
-    width: 100%;
-    height: auto;
-  }
-
-  .about-content {
-    width: 100%;
-  }
-
-  .about-content h1 {
-    font-size: 40px;
-  }
-
-  .about-cards {
-    grid-template-columns: 1fr;
-    margin-top: 60px;
-  }
-
-  .about-quote {
-    padding: 32px 24px;
-  }
-
-  .about-quote p {
-    font-size: 32px;
+    height: 300px;
   }
 
   .newsletter {
-    margin: 20px 24px 50px;
+    margin: 20px 16px 50px;
+    padding: 28px 22px;
     grid-template-columns: 1fr;
-  }
-
-  .newsletter-icon {
-    justify-self: start;
   }
 
   .newsletter-form {
@@ -863,28 +878,17 @@ textarea {
     width: 100%;
   }
 
-  .manager-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .manager-card img {
-    width: 100%;
-    height: auto;
-  }
-
   .footer {
     padding: 28px 24px;
     flex-direction: column;
     gap: 18px;
   }
-
-  .footer-socials {
-    gap: 24px;
-    flex-wrap: wrap;
-  }
 }
 
+.footer-socials {
+  gap: 24px;
+  flex-wrap: wrap;
+}
 
 /* =========================================================
    FOOTER
