@@ -18,6 +18,7 @@
 //  map pinta las cards en pantalla.
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import PostCard from "../components/PostCard";
 import API_URL from "../services/api";
 
@@ -71,9 +72,9 @@ function Home() {
               Ver mis proyectos →
             </a>
 
-            <a href="/sobre-mi" className="text-button">
+            <Link to="/sobre-mi" className="text-button">
               Sobre mí →
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -84,7 +85,7 @@ function Home() {
             className="hero-photo"
           />
         </div>
-      </section>
+      </section >
 
       <section id="posts" className="posts-section">
         <h2>Últimos artículos</h2>
@@ -126,7 +127,7 @@ function Home() {
             mundo.
           </p>
 
-          <a href="/sobre-mi">Conóceme mejor →</a>
+          <Link to="/sobre-mi">Conóceme mejor →</Link>
         </div>
       </section>
     </>
