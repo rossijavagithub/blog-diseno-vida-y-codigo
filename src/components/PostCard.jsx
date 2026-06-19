@@ -14,8 +14,8 @@
 
 // ============================================================= //
 
-import { Link } from "react-router-dom";
-      // 1. → Importo Link para navegar entre rutas sin recargar.
+// 1. → Importo Link para navegar entre rutas sin recargar.
+import { Link } from "react-router-dom";  
 
 function PostCard({ post }) {
 
@@ -25,9 +25,7 @@ function PostCard({ post }) {
   return (
     <article className="post-card">
 
-      {/* Imagen principal del artículo */}
-
-      // 2. → Pinto la imagen que viene de MockAPI.
+      {/*  2. → Pinto la imagen que viene de MockAPI. */}      
       <img
         src={post.image}
         alt={post.title}
@@ -36,25 +34,20 @@ function PostCard({ post }) {
 
       <div className="post-card-content">
 
-        {/* Título del artículo */}
-
-        // 3. → Pinto el título.
+        {/* 3. → Pinto el título. */}
+        
         <h3>{post.title}</h3>
 
-        {/* Descripción corta o resumen */}
-
-        // 4. → Pinto el resumen.
+        {/* 4. → Pinto el resumen. */}
+        
         <p className="post-excerpt">
           {post.excerpt}
         </p>
 
-        {/* 
-          Link de React Router.
-          Permite abrir el detalle del artículo
-          sin recargar toda la aplicación.
-        */}
-
-        // 5. → Creo una ruta dinámica usando el id del post.
+        {/* 5. → Creo una ruta dinámica usando el id del post.
+          Link de React Router. Permite abrir el detalle del artículo sin recargar toda la 
+          aplicación.*/}
+        
         <Link
           to={`/post/${post.id}`}
           className="read-more"
@@ -62,14 +55,11 @@ function PostCard({ post }) {
           Leer más →
         </Link>
 
-        {/* Fecha de publicación */}
-
-        // 6. → Pinto la fecha.
+        {/* 6. → Pinto la fecha. */}
+        
         <p className="post-date">
           {post.date}
         </p>
-
-// ============================================================= //
 
       </div>
 
